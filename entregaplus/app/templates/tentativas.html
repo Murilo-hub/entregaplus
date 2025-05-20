@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tentativas de Login</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h2 class="mb-4 text-center">Tentativas de Login</h2>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Usuário</th>
+                        <th scope="col">IP</th>
+                        <th scope="col">Resultado</th>
+                        <th scope="col">Data/Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for tentativa in tentativas %}
+                    <tr>
+                        <td>{{ tentativa.usuario }}</td>
+                        <td>{{ tentativa.ip }}</td>
+                        <td>
+                            {% if tentativa.resultado == 'Normal' %}
+                                <span class="badge bg-success">Normal</span>
+                            {% elif tentativa.resultado == 'Suspeito' %}
+                                <span class="badge bg-warning text-dark">Suspeito</span>
+                            {% elif tentativa.resultado == 'Tentativa de Invasão' %}
+                                <span class="badge bg-danger">Tentativa de Invasão</span>
+                            {% else %}
+                                {{ tentativa.resultado }}
+                            {% endif %}
+                        </td>
+                        <td>{{ tentativa.timestamp.strftime('%d/%m/%Y %H:%M:%S') }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="{{ url_for('main.dashboard') }}" class="btn btn-primary">Voltar ao Dashboard</a>
+        </div>
+    </div>
+
+</body>
+</html>
