@@ -8,7 +8,7 @@ from sklearn.preprocessing import LabelEncoder
 # classification_report, e a biblioteca joblib, usada para salvar o modelo treinado em disco.
 
 # Carregar dados
-df = pd.read_csv('tentativas_login.csv')
+df = pd.read_csv('logs_login.csv')
 
 # Pré-processar IP (transformar IP em número)
 def ip_para_int(ip):

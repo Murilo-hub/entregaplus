@@ -7,7 +7,7 @@ from flask_login import login_user, logout_user, login_required, current_user
 from .ml_utils import verificar_anomalia
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import request, flash, redirect, url_for, render_template
-from datetime import datetime
+from datetime import datetime, timedelta
 
 main = Blueprint('main', __name__)
 
@@ -26,39 +26,61 @@ def login():
 
         user = User.query.filter_by(email=email).first()
 
-        if user and check_password_hash(user.senha, senha):
-            login_user(user)
-    
-            tipo_login = verificar_anomalia(user.email, ip)
+        if user:
+            # LOGIN COM SENHA CORRETA
+            if check_password_hash(user.senha, senha):
+                login_user(user)
 
-            tentativa = TentativaLogin(usuario=user.email, ip=ip, resultado=tipo_login)
-            db.session.add(tentativa)
-            db.session.commit()
+                try:
+                    tipo_login = verificar_anomalia(user.email, ip)
+                except Exception as e:
+                    tipo_login = 'Normal'
 
-            if tipo_login == 'Suspeito':
-                flash('Login suspeito detectado!', 'danger')
-            elif tipo_login == 'Tentativa de Invasão':
-                flash('Tentativa de invasão detectada!', 'danger')
-
-            return redirect(url_for('main.dashboard'))
-
-        else:
-            tipo_login = verificar_anomalia(email, ip)
-            tentativa = TentativaLogin(usuario=email, ip=ip, resultado=tipo_login)
-            db.session.add(tentativa)
-            db.session.commit()
-
-            if tipo_login == 'Suspeito':
-                flash('Login suspeito detectado. Tente novamente após 30 segundos.', 'warning')
-            elif tipo_login == 'Tentativa de Invasão':
-                flash('Tentativa de invasão detectada! Acesso bloqueado.', 'danger')
-            else:
-                tentativa = TentativaLogin(usuario=email, ip=ip, resultado='Credencial Inválida')
+                tentativa = TentativaLogin(usuario=user.email, ip=ip, resultado=tipo_login)
                 db.session.add(tentativa)
                 db.session.commit()
 
-    return render_template('login.html')
+                if tipo_login == 'Suspeito':
+                    flash('Login suspeito detectado!', 'danger')
+                elif tipo_login == 'Tentativa de Invasão':
+                    flash('Tentativa de invasão detectada!', 'danger')
 
+                return redirect(url_for('main.dashboard'))
+
+            # USUÁRIO EXISTE MAS SENHA ERRADA
+            else:
+                # Verifica tentativas inválidas nos últimos 2 minutos
+                dois_minutos_atras = datetime.utcnow() - timedelta(minutes=2)
+                tentativas_recentes = TentativaLogin.query.filter_by(
+                    usuario=user.email,
+                    ip=ip,
+                    resultado='Credencial Inválida'
+                ).filter(TentativaLogin.horario >= dois_minutos_atras).count()
+
+                if tentativas_recentes >= 3:
+                    resultado = 'Suspeito'
+                elif tentativas_recentes >= 5:
+                    resultado = 'Tentativa de Invasão'
+                else:
+                    resultado = 'Credencial Inválida'
+
+                tentativa = TentativaLogin(usuario=user.email, ip=ip, resultado=resultado)
+                db.session.add(tentativa)
+                db.session.commit()
+
+                flash(f'{resultado}. Tente novamente.', 'danger')
+                return redirect(url_for('main.login'))
+
+        # USUÁRIO NÃO EXISTE
+        else:
+            tentativa = TentativaLogin(usuario=email, ip=ip, resultado='Credencial Inválida')
+            db.session.add(tentativa)
+            db.session.commit()
+
+            flash('Usuário não encontrado.', 'warning')
+            return redirect(url_for('main.login'))
+
+    return render_template('login.html')
 
 @main.route('/dashboard')
 @login_required

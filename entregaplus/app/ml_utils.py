@@ -1,6 +1,7 @@
 import joblib
 import os
 import numpy as np
+import pandas as pd
 from app.models import TentativaLogin
 from datetime import datetime, timedelta
 
@@ -25,7 +26,7 @@ def verificar_anomalia(email, ip):
     ip_num = ip_para_int(ip)
     usuario_cod = usuario_encoder.transform([email])[0] if email in usuario_encoder.classes_ else 0
 
-    X = np.array([[ip_num, usuario_cod]])
+    X = pd.DataFrame([[ip_num, usuario_cod]], columns=['ip', 'usuario_cod'])
     pred = modelo.predict(X)[0]
     resultado = resultado_encoder.inverse_transform([pred])[0]
 
