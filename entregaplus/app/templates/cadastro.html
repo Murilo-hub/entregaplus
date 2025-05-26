@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro - Entrega+</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="centered-box">
+    <h2>Cadastro</h2>
+    <form method="POST">
+      <label>Nome:</label>
+      <input type="text" name="nome" required>
+
+      <label>CPF:</label>
+      <input type="text" name="cpf" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Senha:</label>
+      <input type="password" name="senha" required>
+
+      <button type="submit" href="{{ url_for('main.home') }}">Cadastrar</button>
+    </form>
+    <p>Já tem uma conta? <a href="{{ url_for('main.login') }}">Faça login</a></p>
+  </div>
+
+</body>
+</html>
