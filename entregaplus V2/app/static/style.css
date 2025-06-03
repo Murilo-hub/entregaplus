@@ -1,0 +1,335 @@
+/* Fonte principal */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f0e9;
+  color: #3a2c24;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main.container { /* Para o conteúdo principal das páginas que usam base.html */
+  flex: 1;
+  padding-bottom: 2rem; /* Espaço antes do footer */
+}
+main.sobre-home { /* Classe específica para o main da home.html original */
+  flex: 1;
+}
+
+
+/* Navbar */
+.navbar {
+  background-color: #3a2c24;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem; /* Reduzido um pouco o padding lateral */
+  flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; /* Reduzido o gap */
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #3a2c24; /* Cor do texto do link */
+  background-color: #e2dcd6;
+  padding: 0.5rem 1rem; /* Ajustado padding */
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.navbar nav a:hover {
+  background-color: #c7a78d;
+  color: white;
+}
+
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espaço entre os botões */
+}
+.auth-buttons .greeting {
+  color: #e2dcd6;
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.auth-buttons a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.auth-buttons .signup {
+  background-color: #c7a78d;
+}
+.auth-buttons .signup:hover {
+  background-color: #b38e74;
+}
+
+.auth-buttons .login, .auth-buttons .logout {
+  background-color: #a06e4f;
+}
+.auth-buttons .login:hover, .auth-buttons .logout:hover {
+  background-color: #8c5e40;
+}
+
+
+/* Seção Sobre (home.html) */
+.sobre-home { /* Usando a classe específica da home */
+  padding: 2rem 5%;
+}
+
+.descricao {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem; /* Reduzido margin */
+  flex-wrap: wrap; /* Quebra em telas menores */
+}
+
+.descricao img {
+  max-width: 100%; /* Imagem responsiva */
+  width: 500px; /* Tamanho máximo */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.descricao h1 {
+  font-size: 2.5rem; /* Ajustado tamanho */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.descricao p {
+  font-size: 1.1rem; /* Ajustado tamanho */
+  line-height: 1.6;
+}
+
+/* Depoimentos (home.html) */
+.depoimentos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Reduzido gap */
+}
+
+.depoimento {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem; /* Reduzido gap */
+  background-color: #f9f5f0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  flex-wrap: wrap; /* Quebra em telas menores */
+}
+.depoimento:nth-child(even) { /* Para alternar a ordem da imagem */
+  flex-direction: row-reverse;
+}
+
+
+.depoimento img {
+  width: 120px; /* Reduzido tamanho */
+  height: 120px; /* Reduzido tamanho */
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0; /* Evita que a imagem encolha demais */
+}
+
+.estrelas {
+  font-size: 1rem; /* Ajustado tamanho */
+  color: orange;
+  margin-bottom: 0.3rem;
+}
+
+.depoimento p {
+  margin: 0.2rem 0;
+  font-size: 1rem; /* Ajustado tamanho */
+  line-height: 1.5;
+}
+.depoimento strong {
+  font-size: 1.05rem;
+}
+
+/* Footer */
+footer {
+  background-color: #3a2c24;
+  color: white;
+  padding: 1.5rem 2rem; /* Ajustado padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Quebra em telas menores */
+  gap: 1rem; /* Espaço entre itens do footer */
+  text-align: center; /* Centraliza em telas pequenas */
+}
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  flex-grow: 1; /* Permite que o texto ocupe espaço */
+}
+.social-media {
+  display: flex;
+  gap: 0.8rem; /* Espaço entre ícones sociais */
+  justify-content: center; /* Centraliza ícones se quebrar linha */
+}
+.social-media a {
+  display: inline-block; /* Garante que a imagem não quebre */
+}
+.social-media img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* Torna os ícones brancos */
+  transition: opacity 0.3s ease;
+}
+.social-media img:hover {
+  opacity: 0.7;
+}
+
+
+/* Centered Box (login, cadastro) */
+.centered-box {
+  max-width: 450px; /* Aumentado um pouco */
+  width: 95%; /* Mais responsivo */
+  margin: 3rem auto; /* Ajustado margin */
+  background-color: #f9f5f0;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.centered-box h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #3a2c24;
+  font-weight: 700;
+}
+
+/* Estilos para formulários dentro do centered-box (usando classes Bootstrap como base) */
+.centered-box .form-label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+.centered-box .form-control {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Importante para padding não aumentar o tamanho total */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.centered-box .form-control:focus {
+  border-color: #a06e4f;
+  box-shadow: 0 0 0 0.2rem rgba(160, 110, 79, 0.25);
+  outline: none;
+}
+
+.centered-box .btn-primary { /* Estilo para botões primários */
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #a06e4f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+.centered-box .btn-primary:hover {
+  background-color: #8c5e40;
+}
+
+.centered-box p.mt-3 { /* Parágrafo abaixo do formulário */
+  margin-top: 1.5rem !important; /* Garante margem */
+}
+.centered-box p a {
+  color: #a06e4f;
+  text-decoration: none;
+  font-weight: 500;
+}
+.centered-box p a:hover {
+  text-decoration: underline;
+}
+
+/* Alertas Bootstrap (se não usar base.html, precisa desses estilos) */
+.alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+.alert-success { color: #0f5132; background-color: #d1e7dd; border-color: #badbcc; }
+.alert-info { color: #055160; background-color: #cff4fc; border-color: #b6effb; }
+.alert-warning { color: #664d03; background-color: #fff3cd; border-color: #ffecb5; }
+.alert-danger { color: #842029; background-color: #f8d7da; border-color: #f5c2c7; }
+.alert-dismissible .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: 1.25rem 1rem;
+}
+
+/* Ajustes responsivos gerais */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      padding: 1rem;
+  }
+  .navbar nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem; /* Menor gap na vertical */
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+  }
+  .navbar nav a {
+      display: block; /* Faz os links ocuparem a largura */
+      width: 100%;
+      text-align: center;
+  }
+  .auth-buttons {
+      margin-top: 0.5rem;
+      width: 100%;
+      justify-content: center;
+  }
+  .auth-buttons .greeting {
+      display: none; /* Oculta saudação em telas pequenas para economizar espaço */
+  }
+
+  .descricao {
+      flex-direction: column;
+      text-align: center;
+  }
+  .descricao img {
+      margin-bottom: 1rem;
+  }
+  .depoimento, .depoimento:nth-child(even) {
+      flex-direction: column;
+      text-align: center;
+  }
+  .depoimento img {
+      margin-bottom: 1rem;
+  }
+  footer {
+      flex-direction: column;
+      padding: 1rem;
+  }
+}

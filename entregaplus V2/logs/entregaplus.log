@@ -1,0 +1,55 @@
+2025-06-01 09:58:33,724 INFO: EntregaPlus startup [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\__init__.py:45]
+2025-06-01 09:58:56,428 INFO: EntregaPlus startup [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\__init__.py:45]
+2025-06-01 09:58:57,670 INFO: EntregaPlus startup [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\__init__.py:45]
+2025-06-01 10:03:05,249 INFO: Novo usuário cadastrado: ana@gmail.com [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\routes.py:119]
+2025-06-01 10:03:11,672 INFO: Usuário 'ana@gmail.com' não visto no treino do encoder. Usando código -1. [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:55]
+2025-06-01 10:03:11,786 ERROR: Erro ao consultar TentativasLogin para ana@gmail.com: type object 'TentativaLogin' has no attribute 'horario' [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:72]
+Traceback (most recent call last):
+  File "c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py", line 68, in verificar_anomalia
+    TentativaLogin.horario >= dois_minutos_atras,
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'TentativaLogin' has no attribute 'horario'
+2025-06-01 10:03:11,800 INFO: Predição ML para ana@gmail.com (IP: 127.0.0.1): Suspeito (Features: [{'usuario_cod': -1, 'tentativas_invalidas_usuario': 0}]) [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:85]
+2025-06-01 10:03:11,801 INFO: Login bem-sucedido para ana@gmail.com (IP: 127.0.0.1), resultado ML: Suspeito [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\routes.py:39]
+2025-06-01 10:03:38,760 INFO: Usuário 'ana@gmail.com' não visto no treino do encoder. Usando código -1. [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:55]
+2025-06-01 10:03:38,760 ERROR: Erro ao consultar TentativasLogin para ana@gmail.com: type object 'TentativaLogin' has no attribute 'horario' [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:72]
+Traceback (most recent call last):
+  File "c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py", line 68, in verificar_anomalia
+    TentativaLogin.horario >= dois_minutos_atras,
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'TentativaLogin' has no attribute 'horario'
+2025-06-01 10:03:38,766 INFO: Predição ML para ana@gmail.com (IP: 127.0.0.1): Suspeito (Features: [{'usuario_cod': -1, 'tentativas_invalidas_usuario': 0}]) [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:85]
+2025-06-01 10:03:38,766 INFO: Login bem-sucedido para ana@gmail.com (IP: 127.0.0.1), resultado ML: Suspeito [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\routes.py:39]
+2025-06-01 10:03:48,566 WARNING: Falha de login (senha incorreta) para usuário: ana@gmail.com do IP: 127.0.0.1 [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\routes.py:61]
+2025-06-01 10:03:53,113 INFO: Usuário 'ana@gmail.com' não visto no treino do encoder. Usando código -1. [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:55]
+2025-06-01 10:03:53,113 ERROR: Erro ao consultar TentativasLogin para ana@gmail.com: type object 'TentativaLogin' has no attribute 'horario' [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:72]
+Traceback (most recent call last):
+  File "c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py", line 68, in verificar_anomalia
+    TentativaLogin.horario >= dois_minutos_atras,
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'TentativaLogin' has no attribute 'horario'
+2025-06-01 10:03:53,120 INFO: Predição ML para ana@gmail.com (IP: 127.0.0.1): Suspeito (Features: [{'usuario_cod': -1, 'tentativas_invalidas_usuario': 0}]) [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:85]
+2025-06-01 10:03:53,120 INFO: Login bem-sucedido para ana@gmail.com (IP: 127.0.0.1), resultado ML: Suspeito [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\routes.py:39]
+2025-06-01 10:04:07,772 INFO: Novo usuário cadastrado: admin@entregaplus.com [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\routes.py:119]
+2025-06-01 10:04:11,956 INFO: Usuário 'admin@entregaplus.com' não visto no treino do encoder. Usando código -1. [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:55]
+2025-06-01 10:04:11,956 ERROR: Erro ao consultar TentativasLogin para admin@entregaplus.com: type object 'TentativaLogin' has no attribute 'horario' [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:72]
+Traceback (most recent call last):
+  File "c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py", line 68, in verificar_anomalia
+    TentativaLogin.horario >= dois_minutos_atras,
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'TentativaLogin' has no attribute 'horario'
+2025-06-01 10:04:11,962 INFO: Predição ML para admin@entregaplus.com (IP: 127.0.0.1): Suspeito (Features: [{'usuario_cod': -1, 'tentativas_invalidas_usuario': 0}]) [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:85]
+2025-06-01 10:04:11,962 INFO: Login bem-sucedido para admin@entregaplus.com (IP: 127.0.0.1), resultado ML: Suspeito [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\routes.py:39]
+2025-06-01 10:05:14,619 INFO: EntregaPlus startup [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\__init__.py:45]
+2025-06-01 10:05:21,187 INFO: Usuário 'admin@entregaplus.com' não visto no treino do encoder. Usando código -1. [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:55]
+2025-06-01 10:05:21,240 ERROR: Erro ao chamar verificar_anomalia para admin@entregaplus.com (IP: 127.0.0.1): cannot access local variable 'tentativas_invalidas_usuario' where it is not associated with a value [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\routes.py:41]
+2025-06-01 10:07:34,329 INFO: EntregaPlus startup [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\__init__.py:45]
+2025-06-01 10:07:35,562 INFO: EntregaPlus startup [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\__init__.py:45]
+2025-06-01 10:14:42,589 INFO: Usuário 'ana@gmail.com' não visto no treino do encoder. Usando código -1. [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:55]
+2025-06-01 10:14:42,657 INFO: Predição ML para ana@gmail.com (IP: 127.0.0.1): Suspeito (Features: [{'usuario_cod': -1, 'tentativas_invalidas_usuario': 0}]) [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:85]
+2025-06-01 10:14:42,657 INFO: Login bem-sucedido para ana@gmail.com (IP: 127.0.0.1), resultado ML: Suspeito [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\routes.py:39]
+2025-06-01 10:14:52,596 INFO: Usuário 'admin@entregaplus.com' não visto no treino do encoder. Usando código -1. [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:55]
+2025-06-01 10:14:52,603 INFO: Predição ML para admin@entregaplus.com (IP: 127.0.0.1): Suspeito (Features: [{'usuario_cod': -1, 'tentativas_invalidas_usuario': 0}]) [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\detectors.py:85]
+2025-06-01 10:14:52,603 INFO: Login bem-sucedido para admin@entregaplus.com (IP: 127.0.0.1), resultado ML: Suspeito [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\routes.py:39]
+2025-06-03 06:47:12,439 INFO: EntregaPlus startup [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\__init__.py:45]
+2025-06-03 06:47:13,670 INFO: EntregaPlus startup [in c:\Users\Murilo\OneDrive\Desktop\entregaplus V2\app\__init__.py:45]
