@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Métricas ML - Entrega+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Métricas do Modelo de Machine Learning</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    {% if error_message %}
+        <div class="alert alert-danger">
+            <strong>Erro:</strong> {{ error_message }}
+            <p>Por favor, verifique o arquivo `logs_avaliacao.csv` e execute `train_model.py` novamente.</p>
+            <p>Certifique-se de que o `logs_avaliacao.csv` contém dados válidos e que os emails/resultados nele já foram vistos pelo modelo durante o treino ou existem no banco de dados.</p>
+        </div>
+    {% endif %}
+
+    {% if metrics %}
+        <div class="card mb-4">
+            <div class="card-header">
+                Métricas de Desempenho
+            </div>
+            <div class="card-body">
+                <p><strong>Acurácia:</strong> {{ "%.4f"|format(metrics.accuracy) }}</p>
+                <p><strong>Precisão (Weighted):</strong> {{ "%.4f"|format(metrics.precision) }}</p>
+                <p><strong>Recall (Weighted):</strong> {{ "%.4f"|format(metrics.recall) }}</p>
+                <p><strong>F1-Score (Weighted):</strong> {{ "%.4f"|format(metrics.f1_score) }}</p>
+            </div>
+        </div>
+
+        {% if metrics.confusion_matrix and metrics.class_names %}
+        <div class="card mb-4">
+            <div class="card-header">
+                Matriz de Confusão
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped text-center">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            {% for class_name in metrics.class_names %}
+                                <th>Predito: {{ class_name }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in range(metrics.confusion_matrix|length) %}
+                        <tr>
+                            <th>Real: {{ metrics.class_names[i] }}</th>
+                            {% for j in range(metrics.confusion_matrix[i]|length) %}
+                                <td>{{ metrics.confusion_matrix[i][j] }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <p class="text-muted">
+                    A Matriz de Confusão mostra o número de acertos e erros do modelo para cada classe.
+                    (Linhas: Valores Reais, Colunas: Valores Preditos)
+                </p>
+            </div>
+        </div>
+        {% endif %}
+
+    {% else %}
+        <div class="alert alert-info text-center">
+            Nenhuma métrica disponível para exibição. Verifique se há dados de avaliação e se o modelo foi treinado.
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

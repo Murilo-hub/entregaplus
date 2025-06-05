@@ -1,0 +1,63 @@
+2025-06-03 19:15:13,230 INFO: EntregaPlus startup [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:16:23,204 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:16:25,189 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:17:14,671 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:18:37,019 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:18:47,481 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:18:49,665 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:19:02,846 INFO: Login bem-sucedido para usuário: admin@admin.com do IP: 127.0.0.1 [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:45]
+2025-06-03 19:19:24,986 ERROR: Erro ao carregar modelos de ML: name 'joblib' is not defined [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:217]
+2025-06-03 19:19:42,465 ERROR: Erro ao carregar modelos de ML: name 'joblib' is not defined [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:217]
+2025-06-03 19:22:12,645 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:22:27,561 ERROR: Erro ao carregar modelos de ML: name 'joblib' is not defined [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:217]
+2025-06-03 19:24:07,488 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:24:09,471 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:24:27,163 ERROR: Erro ao carregar/preparar dados de avaliação: y contains previously unseen labels: 'admin@admin.com' [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:247]
+2025-06-03 19:25:28,937 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:25:30,973 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:25:42,548 INFO: Login bem-sucedido para usuário: admin@admin.com do IP: 127.0.0.1 [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:50]
+2025-06-03 19:25:48,167 ERROR: Erro ao carregar/preparar dados de avaliação: y contains previously unseen labels: 'admin@admin.com' [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:250]
+2025-06-03 19:26:47,923 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:26:49,956 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:26:59,187 INFO: Login bem-sucedido para usuário: admin@admin.com do IP: 127.0.0.1 [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:50]
+2025-06-03 19:27:03,823 INFO: Tentando carregar modelo de: C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\ml_model\modelos\modelo_random_forest.pkl [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:217]
+2025-06-03 19:27:03,824 INFO: Tentando carregar usuario_encoder de: C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\ml_model\modelos\usuario_encoder.pkl [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:218]
+2025-06-03 19:27:03,824 INFO: Tentando carregar resultado_encoder de: C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\ml_model\modelos\resultado_encoder.pkl [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:219]
+2025-06-03 19:27:03,869 INFO: Modelos de ML e encoders carregados com sucesso na rota /metricas_ml. [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:241]
+2025-06-03 19:27:03,870 INFO: Tentando carregar dados de avaliação de: C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\ml_model\logs_avaliacao.csv [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:253]
+2025-06-03 19:27:03,905 INFO: Dados de avaliação carregados e preparados com sucesso. Shape de X_avaliacao: (14, 2) [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:304]
+2025-06-03 19:27:03,926 ERROR: Erro ao calcular métricas do ML: At least one label specified must be in y_true [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:347]
+Traceback (most recent call last):
+  File "C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py", line 336, in metricas_ml
+    confusion = confusion_matrix(y_verdadeiro, y_predito, labels=labels_for_metrics)
+  File "C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\.venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 216, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\.venv\Lib\site-packages\sklearn\metrics\_classification.py", line 354, in confusion_matrix
+    raise ValueError("At least one label specified must be in y_true")
+ValueError: At least one label specified must be in y_true
+2025-06-03 19:29:25,986 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:29:27,987 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:29:40,944 INFO: Login bem-sucedido para usuário: admin@admin.com do IP: 127.0.0.1 [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:50]
+2025-06-03 19:29:45,391 INFO: Tentando carregar modelo de: C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\ml_model\modelos\modelo_random_forest.pkl [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:217]
+2025-06-03 19:29:45,392 INFO: Tentando carregar usuario_encoder de: C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\ml_model\modelos\usuario_encoder.pkl [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:218]
+2025-06-03 19:29:45,392 INFO: Tentando carregar resultado_encoder de: C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\ml_model\modelos\resultado_encoder.pkl [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:219]
+2025-06-03 19:29:45,432 INFO: Modelos de ML e encoders carregados com sucesso na rota /metricas_ml. [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:239]
+2025-06-03 19:29:45,432 INFO: Tentando carregar dados de avaliação de: C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\ml_model\logs_avaliacao.csv [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:249]
+2025-06-03 19:29:45,467 INFO: Dados de avaliação carregados e preparados com sucesso. Shape de X_avaliacao: (14, 2), Shape de y_verdadeiro: (14,) [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:303]
+2025-06-03 19:29:45,467 INFO: Primeiros 5 resultados reais codificados: [1 2 2 2 2] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:304]
+2025-06-03 19:29:45,468 INFO: Rótulos conhecidos pelo resultado_encoder: ['Credencial Inválida', 'Normal', 'Suspeito', 'Tentativa de Invasão'] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:305]
+2025-06-03 19:29:45,481 INFO: Primeiros 5 resultados previstos codificados: [2 2 2 2 2] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:326]
+2025-06-03 19:29:45,482 INFO: Classes presentes em y_verdadeiro (antes da contagem única): [np.int64(1), np.int64(2)] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:327]
+2025-06-03 19:29:45,482 INFO: Classes presentes em y_predito (antes da contagem única): [np.int64(2)] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:328]
+2025-06-03 19:29:45,482 INFO: Classes únicas em y_verdadeiro: {np.int64(1), np.int64(2)} [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:339]
+2025-06-03 19:29:45,483 INFO: Classes únicas em y_predito: {np.int64(2)} [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:340]
+2025-06-03 19:29:45,483 ERROR: Erro CRÍTICO ao calcular métricas do ML: ufunc 'less' did not contain a loop with signature matching types (<class 'numpy.dtypes.Int64DType'>, <class 'numpy.dtypes.StrDType'>) -> None [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:382]
+Traceback (most recent call last):
+  File "C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py", line 347, in metricas_ml
+    all_possible_labels.sort() # Ordena para consistência se necessário
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+numpy._core._exceptions._UFuncNoLoopError: ufunc 'less' did not contain a loop with signature matching types (<class 'numpy.dtypes.Int64DType'>, <class 'numpy.dtypes.StrDType'>) -> None
+2025-06-03 19:30:47,693 INFO: Tentando carregar modelo de: C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\ml_model\modelos\modelo_random_forest.pkl [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:217]
+2025-06-03 19:30:47,695 INFO: Tentando carregar usuario_encoder de: C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\ml_model\modelos\usuario_encoder.pkl [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:218]
+2025-06-03 19:30:47,695 INFO: Tentando carregar resultado_encoder de: C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\ml_model\modelos\resultado_encoder.pkl [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:219]
+2025-06-03 19:30:47,783 INFO: Primeiros 5 resultados reais codificados: [1 2 2 2 2] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:304]

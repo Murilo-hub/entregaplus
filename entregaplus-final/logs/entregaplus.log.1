@@ -1,0 +1,72 @@
+2025-06-03 19:37:30,916 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:37:32,893 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:37:46,931 INFO: Login bem-sucedido para usuário: admin@admin.com do IP: 127.0.0.1 [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:53]
+2025-06-03 19:37:55,464 INFO: Modelos de ML e encoders carregados com sucesso na rota /metricas_ml. [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:220]
+2025-06-03 19:37:55,472 WARNING: Nenhum usuário no CSV de avaliação encontrado no encoder de usuários. [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:246]
+2025-06-03 19:46:07,970 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:46:38,224 INFO: EntregaPlus startup [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:46:40,219 INFO: EntregaPlus startup [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:46:54,573 INFO: Login bem-sucedido para usuário: admin@admin.com do IP: 127.0.0.1 [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:53]
+2025-06-03 19:47:04,516 INFO: Modelos de ML e encoders carregados com sucesso na rota /metricas_ml. [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:220]
+2025-06-03 19:47:04,529 INFO: Dados de avaliação carregados e preparados com sucesso. Shape de X_avaliacao: (14, 2), Shape de y_verdadeiro: (14,) [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:265]
+2025-06-03 19:47:04,530 INFO: Primeiros 5 resultados reais codificados: [1 2 2 2 2] [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:266]
+2025-06-03 19:47:04,541 INFO: Primeiros 5 resultados previstos codificados: [1 1 0 0 0] [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:270]
+2025-06-03 19:47:04,542 INFO: Rótulos conhecidos pelo resultado_encoder (numéricos): [0, 1, 2, 3] [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:275]
+2025-06-03 19:47:04,543 INFO: Classes presentes em y_verdadeiro: [1, 2] [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:280]
+2025-06-03 19:47:04,543 INFO: Classes presentes em y_predito: [0, 1] [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:281]
+2025-06-03 19:47:04,543 INFO: Rótulos numéricos finais para métricas: [0, 1, 2, 3] [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:295]
+2025-06-03 19:47:04,544 INFO: Nomes de rótulos finais para métricas: ['Credencial Inválida', 'Normal', 'Suspeito', 'Tentativa de Invasão'] [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:296]
+2025-06-03 19:47:04,544 ERROR: Erro ao calcular as métricas do ML: name 'classification_report' is not defined [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:343]
+Traceback (most recent call last):
+  File "c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py", line 299, in metricas_ml
+    report = classification_report(
+             ^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'classification_report' is not defined
+2025-06-03 19:49:59,902 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:50:16,161 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:50:18,151 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 19:50:42,786 INFO: Login bem-sucedido para usuário: admin@admin.com do IP: 127.0.0.1 [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:53]
+2025-06-03 19:50:50,802 INFO: Modelos de ML e encoders carregados com sucesso na rota /metricas_ml. [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:220]
+2025-06-03 19:50:50,812 INFO: Dados de avaliação carregados e preparados com sucesso. Shape de X_avaliacao: (14, 2), Shape de y_verdadeiro: (14,) [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:265]
+2025-06-03 19:50:50,814 INFO: Primeiros 5 resultados reais codificados: [1 2 2 2 2] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:266]
+2025-06-03 19:50:50,826 INFO: Primeiros 5 resultados previstos codificados: [1 1 0 0 0] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:270]
+2025-06-03 19:50:50,828 INFO: Rótulos conhecidos pelo resultado_encoder (numéricos): [0, 1, 2, 3] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:275]
+2025-06-03 19:50:50,829 INFO: Classes presentes em y_verdadeiro: [1, 2] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:280]
+2025-06-03 19:50:50,829 INFO: Classes presentes em y_predito: [0, 1] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:281]
+2025-06-03 19:50:50,829 INFO: Rótulos numéricos finais para métricas: [0, 1, 2, 3] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:295]
+2025-06-03 19:50:50,830 INFO: Nomes de rótulos finais para métricas: ['Credencial Inválida', 'Normal', 'Suspeito', 'Tentativa de Invasão'] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:296]
+2025-06-03 19:50:50,830 ERROR: Erro ao calcular as métricas do ML: name 'classification_report' is not defined [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:343]
+Traceback (most recent call last):
+  File "C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py", line 299, in metricas_ml
+    report = classification_report(
+             ^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'classification_report' is not defined
+2025-06-03 20:05:41,046 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 20:05:43,084 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 20:05:53,988 INFO: Login bem-sucedido para usuário: admin@admin.com do IP: 127.0.0.1 [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:53]
+2025-06-03 20:06:02,385 INFO: Modelos de ML e encoders carregados com sucesso na rota /metricas_ml. [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:220]
+2025-06-03 20:06:02,394 INFO: Dados de avaliação carregados e preparados com sucesso. Shape de X_avaliacao: (14, 2), Shape de y_verdadeiro: (14,) [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:265]
+2025-06-03 20:06:02,395 INFO: Primeiros 5 resultados reais codificados: [1 2 2 2 2] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:266]
+2025-06-03 20:06:02,407 INFO: Primeiros 5 resultados previstos codificados: [1 1 0 0 0] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:270]
+2025-06-03 20:06:02,408 INFO: Rótulos conhecidos pelo resultado_encoder (numéricos): [0, 1, 2, 3] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:275]
+2025-06-03 20:06:02,408 INFO: Classes presentes em y_verdadeiro: [1, 2] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:280]
+2025-06-03 20:06:02,409 INFO: Classes presentes em y_predito: [0, 1] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:281]
+2025-06-03 20:06:02,409 INFO: Rótulos numéricos finais para métricas: [0, 1, 2, 3] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:295]
+2025-06-03 20:06:02,409 INFO: Nomes de rótulos finais para métricas: ['Credencial Inválida', 'Normal', 'Suspeito', 'Tentativa de Invasão'] [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:296]
+2025-06-03 20:06:02,410 ERROR: Erro ao calcular as métricas do ML: name 'classification_report' is not defined [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:343]
+Traceback (most recent call last):
+  File "C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py", line 299, in metricas_ml
+    report = classification_report(
+             ^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'classification_report' is not defined
+2025-06-03 20:07:37,502 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 20:08:10,646 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 20:08:30,121 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 20:08:32,142 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 20:08:42,884 INFO: Login bem-sucedido para usuário: admin@admin.com do IP: 127.0.0.1 [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:53]
+2025-06-03 20:08:48,206 INFO: Métricas de ML calculadas com sucesso. [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:339]
+2025-06-03 20:12:36,275 INFO: Métricas de ML calculadas com sucesso. [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:339]
+2025-06-03 20:12:41,369 INFO: Métricas de ML calculadas com sucesso. [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:339]
+2025-06-03 20:14:52,707 INFO: Novo usuário cadastrado: leo@gmail.com [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:170]
+2025-06-03 20:14:55,169 INFO: Login bem-sucedido para usuário: admin@admin.com do IP: 127.0.0.1 [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:53]
+2025-06-03 20:15:05,307 INFO: Login bem-sucedido para usuário: leo@gmail.com do IP: 127.0.0.1 [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:53]

@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Tentativas de Login - Entrega+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Registro de Tentativas de Login</h2>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover table-striped align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Usuário (Email)</th>
+                    <th scope="col">IP</th>
+                    <th scope="col">Resultado da Tentativa</th>
+                    <th scope="col">Data/Hora (Brasília)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {# CORREÇÃO APLICADA AQUI: Mudado de 'tentativas_paginadas' para 'tentativas' #}
+                {% if tentativas and tentativas.items %}
+                    {% for tentativa in tentativas.items %}
+                    <tr>
+                        <td>{{ tentativa.id }}</td>
+                        <td>{{ tentativa.usuario }}</td>
+                        <td>{{ tentativa.ip }}</td>
+                        <td>
+                            {% if tentativa.resultado == 'Normal' %}
+                                <span class="badge bg-success">Normal</span>
+                            {% elif tentativa.resultado == 'Suspeito' %}
+                                <span class="badge bg-warning text-dark">Suspeito</span>
+                            {% elif tentativa.resultado == 'Tentativa de Invasão' %}
+                                <span class="badge bg-danger">Tentativa de Invasão</span>
+                            {% elif tentativa.resultado == 'Credencial Inválida' %}
+                                <span class="badge bg-secondary">Credencial Inválida</span>
+                            {% else %}
+                                <span class="badge bg-light text-dark">{{ tentativa.resultado }}</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ tentativa.timestamp.strftime('%d/%m/%Y %H:%M:%S') }}</td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="5" class="text-center">Nenhuma tentativa de login registrada.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+    {# CORREÇÃO APLICADA AQUI: Mudado de 'tentativas_paginadas' para 'tentativas' em toda a seção de paginação #}
+    {% if tentativas and tentativas.pages > 1 %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            <li class="page-item {% if not tentativas.has_prev %}disabled{% endif %}">
+                <a class="page-link" href="{{ url_for('main.ver_tentativas', page=tentativas.prev_num) if tentativas.has_prev else '#_'}}">Anterior</a>
+            </li>
+
+            {% for page_num in tentativas.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=2) %}
+                {% if page_num %}
+                    <li class="page-item {% if page_num == tentativas.page %}active{% endif %}">
+                        <a class="page-link" href="{{ url_for('main.ver_tentativas', page=page_num) }}">{{ page_num }}</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                {% endif %}
+            {% endfor %}
+
+            <li class="page-item {% if not tentativas.has_next %}disabled{% endif %}">
+                <a class="page-link" href="{{ url_for('main.ver_tentativas', page=tentativas.next_num) if tentativas.has_next else '#_'}}">Próxima</a>
+            </li>
+        </ul>
+    </nav>
+    {% endif %}
+
+    <div class="text-center mt-4">
+        <a href="{{ url_for('main.dashboard') }}" class="btn btn-primary">Voltar ao Dashboard</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+Flask>=2.0
+Flask-SQLAlchemy>=2.5
+Flask-Login>=0.5
+Werkzeug>=2.0 # Flask-Login e Flask podem depender de versões específicas
+pytz>=2021.1
+pandas>=1.2 # Para manipulação de dados no ML
+scikit-learn>=0.24 # Para RandomForest, LabelEncoder
+joblib>=1.0 # Para salvar/carregar modelos ML
+python-dotenv 

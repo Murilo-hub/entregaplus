@@ -1,0 +1,6 @@
+2025-06-03 20:24:08,779 INFO: EntregaPlus startup [in c:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 20:24:50,049 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 20:24:52,201 INFO: EntregaPlus startup [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\__init__.py:45]
+2025-06-03 20:25:02,340 INFO: Login bem-sucedido para usuário: admin@admin.com do IP: 127.0.0.1 [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:53]
+2025-06-03 20:25:05,434 WARNING: Usuários desconhecidos no logs_avaliacao.csv: ['leo@gmail.com']. Estes usuários não serão avaliados. [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:266]
+2025-06-03 20:25:05,487 INFO: Métricas de ML calculadas com sucesso. [in C:\Users\Felipe\Desktop\entregaplus-main\entregaplus V2\app\routes.py:339]
